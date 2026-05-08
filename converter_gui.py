@@ -175,6 +175,7 @@ class ConvertThread(QThread):
 
     def run(self):
         result = False
+        print(self.file_list)
         for file in self.file_list:
             print(f"convert:{file}")
             save_file = self.save_path + os.sep + os.path.splitext(os.path.basename(file))[0] + ".jpeg"

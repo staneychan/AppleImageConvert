@@ -357,7 +357,7 @@ def scan_files(path, suffix=None):
     for root, dirs, files in os.walk(path):
         for file in files:
             if suffix is not None:
-                if file.endswith(suffix):
+                if file.lower().endswith(suffix):
                     result.append(os.path.join(root, file))
             else:
                 result.append(os.path.join(root, file))
