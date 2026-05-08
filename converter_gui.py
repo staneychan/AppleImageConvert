@@ -7,7 +7,10 @@ from app import Ui_Dialog
 from converter import *
 from app_language import update_language
 
+'''
+打包:pyinstaller --hidden-import=PySide6 -F -w converter_gui.py
 
+'''
 
 class ConverterDialog(QDialog):
     def __init__(self):
